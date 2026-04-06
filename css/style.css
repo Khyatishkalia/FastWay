@@ -217,19 +217,40 @@ ul {
   justify-content: space-between;
 }
 
+/* Navbar container alignment */
 .logo {
   display: flex;
   align-items: center;
-  gap: 10px;
-  font-size: 1.5rem;
-  font-weight: 700;
 }
 
+/* Logo styling */
 .logo-img {
-  height: 110px;
+  height: 80px;       /* Desktop size */
   width: auto;
-  transition: var(--transition-normal);
-  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.2));
+  transition: transform 0.3s ease;
+}
+
+/* Hover effect (subtle zoom) */
+.logo-img:hover {
+  transform: scale(1.08);
+}
+
+/* Make navbar a bit taller if needed */
+.navbar {
+  padding: 10px 20px;
+}
+
+/* 📱 Mobile responsiveness */
+@media (max-width: 768px) {
+  .logo-img {
+    height: 55px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-img {
+    height: 45px;
+  }
 }
 
 .header.scrolled .logo-img {
