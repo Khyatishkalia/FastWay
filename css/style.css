@@ -233,18 +233,20 @@ ul {
   min-height: 110px !important;
 }
 
-/* Navbar container alignment */
 .logo {
+  height: 100px;
   display: flex;
   align-items: center;
 }
 
-/* Logo styling */
-.logo-img {
-  height: 90px !important;   /* force bigger size */
+.logo img {
+  height: 100%;
   width: auto;
   max-height: none !important;
-  object-fit: contain;
+}
+.header img,
+.navbar img {
+  max-height: none !important;
 }
 
 /* Hover effect (subtle zoom) */
