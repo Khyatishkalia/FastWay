@@ -194,6 +194,9 @@ ul {
    ========================================================================== */
 
 .header {
+  height: 110px; /* increase this */
+  display: flex;
+  align-items: center;
   position: fixed;
   top: 0;
   left: 0;
@@ -215,6 +218,7 @@ ul {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  height: 100%;
 }
 
 /* Navbar container alignment */
@@ -225,9 +229,10 @@ ul {
 
 /* Logo styling */
 .logo-img {
-  height: 80px;       /* Desktop size */
+  height: 90px !important;   /* force bigger size */
   width: auto;
-  transition: transform 0.3s ease;
+  max-height: none !important;
+  object-fit: contain;
 }
 
 /* Hover effect (subtle zoom) */
@@ -252,10 +257,17 @@ ul {
     height: 45px;
   }
 }
-
 .header.scrolled .logo-img {
-  height: 110px;
-  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+  height: 70px;
+}
+@media (max-width: 768px) {
+  .header {
+    height: 80px;
+  }
+
+  .logo-img {
+    height: 60px !important;
+  }
 }
 
 .logo-icon {
